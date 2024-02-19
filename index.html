@@ -1,22 +1,30 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dragon Repeller</title>
     <title>RPG - Dragon Repeller</title>
-    <script src="main.js"></script>
   </head>
   <body>
-    <div id="game">
+    <h1 id="header">Dragon Repeller</h1>
+    <div>
+      <a href="https://github.com/SpartanDev986" target="blank"><img id="personal-logo" src="https://i.postimg.cc/9My771Gr/8d8e46a9-201c-4f52-a7e3-15899f2677e8-NO-BACKGROUND-UPSCALED-out.png" alt="Creator logo"></a>
+    </div>
+    <div id="game" class="dashed">
       <div id="stats">
         <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
         <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
         <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
       </div>
       <div id="controls">
-        <button id="button1">Go to store</button>
-        <button id="button2">Go to cave</button>
-        <button id="button3">Fight dragon</button>
+        <div class="container-fluid flex-column">
+           <div class="d-flex p-2"><button id="button1" class="btn btn-success" type="button" role="button">Go to store<i class="fa-solid fa-store"></i></button></div>
+           <div class="d-flex p-2"><button id="button2" class="btn btn-success" type="button" role="button">Go to cave<i class="fa-solid fa-mountain fa-lg" style="color: #5b3c06;"></i></button></div>
+           <div class="d-flex p-2"><button id="button3" class="btn btn-success" type="button" role="button">Fight dragon<i class="fa-solid fa-dragon fa-beat-fade" style="color: #FFD43B;"></i></button></div>
+        </div>
       </div>
       <div id="monsterStats">
         <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
@@ -26,5 +34,6 @@
         Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.
       </div>
     </div>
-  </body>
+  <script src="./script.js"></script>
+ </body>
 </html>
